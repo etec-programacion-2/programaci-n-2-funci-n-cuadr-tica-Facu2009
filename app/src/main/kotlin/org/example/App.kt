@@ -11,5 +11,13 @@ class App {
 }
 
 fun main() {
-    println(App().greeting)
+    val a = -2
+    val b = -5
+    val c = 1
+
+    if (a == 0){
+        println("a no puede ser igual a 0")
+    } else {
+        println("f(x) = ${a}x² + ${b}x + ${c}")
+    }
 }
