@@ -11,13 +11,16 @@ class App {
 }
 
 fun main() {
-    val a = -2
+    val a = 2
     val b = -5
     val c = 1
+
+    val masmenos1 = if(b >=0) "+ $b" else "- ${-b}"
+    val masmenos2 = if(c >=0) "+ $c" else "- ${-c}"
 
     if (a == 0){
         println("a no puede ser igual a 0")
     } else {
-        println("f(x) = ${a}x² + ${b}x + ${c}")
+        println("f(x) = ${a}x² ${masmenos1}x $masmenos2")
     }
 }
