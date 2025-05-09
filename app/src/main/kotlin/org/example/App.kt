@@ -10,6 +10,8 @@ class App {
             return "Hello World!"
         }
 }
+
+// ETAPA 1 EN DONDE PRINTEO LA FUNCION Y CON UN IF SI A ES = 0 SE PRINTEA QUE NO SE PUEDE 
 fun etapa1(){
 
     val masmenos1 = if(b >=0) "+ $b" else "- ${-b}"
@@ -22,14 +24,17 @@ fun etapa1(){
     }
 }
 
+// VARIABLES PARA TODO EL CODE 
 const val a = 3.0
 const val b = 2.0
 const val c = -1.0
 
+// CALCULO LOS VALORES DE LA FUNCION PARA HACER LA TABLA DE VALORES 
 fun calcularFuncion(x: Double): Double {
     return a * x * x + b * x + c
 }
 
+// REALIZO LA TABLA DE VALORES CON UN FOR 
 fun etapa2() {
     println("Tabla de valores para f(x) = ${a}x² + ${b}x + ${c}")
     println("--------------------------------")
@@ -41,11 +46,11 @@ fun etapa2() {
         println("   $x  |   $fx")
     }
 }
-
+// CALCULO EL DISCRIMINANTE 
 fun discriminante(): Double {
     return b * b - 4 * a * c
 }
-
+// CALCULO LAS RAICES 
 fun racices() {
     val raizDiscriminante = Math.sqrt(discriminante())
     println(raizDiscriminante)
@@ -55,8 +60,9 @@ fun racices() {
     println(x2)
     println("La raices son: x1 = ${x1} y x2 = ${x2}")
 }
-
+// ACA LLAMO A TODAS LAS FUN PARA VER SI FUNCIONAN 
 fun main() {
     //println("Discriminante: %.2f".format(discriminante()))
     racices()
+    // %.2f SIGNIFICA QUE SE APROXIMA EL RESULTADO A DOS DECIMALES
 }
