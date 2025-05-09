@@ -9,18 +9,39 @@ class App {
             return "Hello World!"
         }
 }
-
-fun main() {
-    val a = 2
-    val b = -5
-    val c = 1
+fun etapa1(){
 
     val masmenos1 = if(b >=0) "+ $b" else "- ${-b}"
     val masmenos2 = if(c >=0) "+ $c" else "- ${-c}"
 
-    if (a == 0){
+    if (a == 0.0){
         println("a no puede ser igual a 0")
     } else {
         println("f(x) = ${a}x² ${masmenos1}x $masmenos2")
     }
+}
+
+const val a = 2.8
+const val b = 3.6
+const val c = 5.9
+
+fun calcularFuncion(x: Double): Double {
+    return a * x * x + b * x + c
+}
+
+fun etapa2() {
+    println("Tabla de valores para f(x) = ${a}x² + ${b}x + ${c}")
+    println("--------------------------------")
+    println("   x   |   f(x) ")
+    println("--------------------------------")
+
+    for (x in -5..5) {
+        val fx: Double = calcularFuncion(x.toDouble())
+        println("   $x  |   $fx")
+    }
+}
+
+
+fun main() {
+    etapa2()
 }
